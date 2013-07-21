@@ -10,11 +10,11 @@ add_action( 'wp_enqueue_scripts', 'your_function' );
 
 
 function your_other_function() {
-		wp_register_script( 'your_other_script', get_template_directory_uri() . '/assets/js/your_other_script.js', array('jquery') );
+	wp_register_script( 'your_other_script', get_template_directory_uri() . '/assets/js/your_other_script.js', array('jquery') );
         wp_enqueue_script('your_other_script'); // Enqueue it!
 		
- if (is_page('page-name')) {
-		wp_register_script( 'your_condtional_script', get_template_directory_uri() . '/assets/js/your_condtional_script.js', array('jquery') );
+ 	if (is_page('page-slug')) {
+	wp_register_script( 'your_condtional_script', get_template_directory_uri() . '/assets/js/your_condtional_script.js', array('jquery') );
         wp_enqueue_script('your_condtional_script'); // Conditional script(s)
 
     }		
