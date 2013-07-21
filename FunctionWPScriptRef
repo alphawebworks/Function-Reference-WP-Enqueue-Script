@@ -2,20 +2,20 @@
 
 function your_function()
 {
-        wp_register_script('modernizr', get_template_directory_uri() . '/assets/js/modernizr.custom.87724.js', array('jquery'), '2.6.2'); // Modernizr
-        wp_enqueue_script('modernizr'); // Enqueue it!
+        wp_register_script('your_script', get_template_directory_uri() . '/assets/js/your_script.js', array('jquery'), '2.6.2');
+        wp_enqueue_script('your_script'); // Enqueue it!
 		
 }
 add_action( 'wp_enqueue_scripts', 'your_function' );
 
 
 function your_other_function() {
-		wp_register_script( 'scripts', get_template_directory_uri() . '/assets/js/scripts.js', array('jquery') ); // 
-        wp_enqueue_script('scripts'); // Enqueue it!
+		wp_register_script( 'your_other_script', get_template_directory_uri() . '/assets/js/your_other_script.js', array('jquery') );
+        wp_enqueue_script('your_other_script'); // Enqueue it!
 		
  if (is_page('page-name')) {
-		wp_register_script( 'fancyboxpack', get_template_directory_uri() . '/assets/js/fancybox/source/jquery.fancybox.pack.js', array('jquery') ); // 
-        wp_enqueue_script('fancyboxpack'); // Conditional script(s)
+		wp_register_script( 'your_condtional_script', get_template_directory_uri() . '/assets/js/your_condtional_script.js', array('jquery') );
+        wp_enqueue_script('your_condtional_script'); // Conditional script(s)
 
     }		
 		
