@@ -2,7 +2,7 @@
 
 function your_function()
 {
-        wp_register_script('your_script', get_template_directory_uri() . '/assets/js/your_script.js', array('jquery'), '2.6.2');
+        wp_register_script('your_script', get_template_directory_uri() . '/assets/js/your_script.js', array('jquery') );
         wp_enqueue_script('your_script'); // Enqueue it!
 		
 }
